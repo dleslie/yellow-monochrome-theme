@@ -1,11 +1,11 @@
-;;; sexy-monochrome-theme.el --- A sexy dark Emacs >= 24 theme for your sexy code
+;;; yellow-monochrome-theme.el --- A yellow dark Emacs >= 24 theme for your yellow code
 
-;; Copyright (c) 2017 Volodymyr Yevtushenko
+;; Copyright (c) 2019 Daniel Leslie
 
-;; Author: Volodymyr Yevtushenko <voloyev@vivaldi.net>
+;; Author: Daniel Leslie <dan@ironoxide.ca>
 ;; Keywords: themes
-;; URL: https://github.com/voloyev/sexy-monochrome-theme
-;; Version: 3.0
+;; URL: https://github.com/dleslie/yellow-monochrome-theme
+;; Version: 1.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,11 +24,15 @@
 
 ;; To use it, put the following in your Emacs configuration file:
 ;;
-;;   (load-theme 'sexy-monochrome t)
+;;   (load-theme 'yellow-monochrome t)
 ;;
 ;; Requirements: Emacs >= 24.
 
 ;;; Credits:
+
+
+;; Based on sexy-monochrome-theme by Volodymyr Yevtushenko <voloyev@vivaldi.net>
+;; https://github.com/voloyev/sexy-monochrome-theme
 
 ;; Based on the Xavier Noria monochrome-theme
 ;; https://github.com/fxn/monochrome-theme.el/
@@ -38,8 +42,8 @@
 
 ;;; Code:
 
-(deftheme sexy-monochrome
-  "Gray on black (with bit of light slate gray colours) theme for your hacking sessions.")
+(deftheme yellow-monochrome
+  "Yellow on black theme for your hacking sessions.")
 
 (font-lock-add-keywords 'c-mode
                         '(("\\(\\w+\\)\\s-*\("
@@ -61,7 +65,7 @@
       (paren-mismatch "#ff0000"))
 
   (custom-theme-set-faces
-   'sexy-monochrome
+   'yellow-monochrome
 
    `(default ((,class (:foreground ,lgray :background ,gblack))))
    `(cursor ((,class (:background ,lgray))))
@@ -313,7 +317,7 @@
                                           :slant unspecified :underline ,sgray)))))
    
   (custom-theme-set-variables
-   'sexy-monochrome
+   'yellow-monochrome
    `(ansi-color-names-vector [,gblack ,lgray ,dgray ,sgray])))
 
 ;;;###autoload
@@ -321,9 +325,9 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'sexy-monochrome)
+(provide-theme 'yellow-monochrome)
 
 ;; Local Variables:
 ;; End:
 
-;;; sexy-monochrome-theme.el ends here
+;;; yellow-monochrome-theme.el ends here
